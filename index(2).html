@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DJ Elul | Live Sets and Bookings</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#141b4d;--ink:#f2eeff;--mute:#b9b4e6;--pink:#ff3d8b;--amber:#ffc23c;--card:#1d2668;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#141b4d}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "DM Sans",system-ui,sans-serif}
+h1,h2{font-family:"Bricolage Grotesque","Arial Black",sans-serif;line-height:1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:56px 0 40px}
+h1{font-size:clamp(52px,11vw,112px);font-weight:800;letter-spacing:-.03em}
+h1 span{display:block;color:var(--pink)}
+.tag{color:var(--mute);max-width:32ch;margin:18px 0 24px}
+.btn{display:inline-block;background:var(--pink);color:#fff;font-weight:500;text-decoration:none;padding:13px 22px;border-radius:999px;margin-right:8px}
+.btn.alt{background:none;border:2px solid var(--amber);color:var(--amber)}
+.rec{width:100%;max-width:380px;justify-self:center;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0b0f33 0 3px,#10164a 3px 7px);position:relative;animation:spin 9s linear infinite;box-shadow:0 0 0 6px #0b0f33}
+.rec::after{content:"";position:absolute;inset:34%;border-radius:50%;background:var(--pink);box-shadow:inset 0 0 0 10px var(--amber)}
+.rec::before{content:"";position:absolute;inset:48.5%;border-radius:50%;background:var(--bg);z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.rec{animation:none}}
+section{padding:40px 0;border-top:2px solid var(--card)}
+h2{font-size:clamp(30px,5vw,44px);font-weight:800;margin-bottom:20px}
+.gigs{list-style:none;margin:0;padding:0}
+.gigs li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--card)}
+.gigs b{color:var(--amber);font-weight:500}
+.gigs small{display:block;color:var(--mute)}
+.genres{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0}
+.genres li{background:var(--card);padding:8px 16px;border-radius:999px}
+.qr{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--card);border-radius:20px;padding:28px}
+#qr{width:200px;height:200px;background:#fff;padding:12px;border-radius:12px}
+#qr svg{display:block;width:100%;height:100%}
+label{display:block;font-weight:500;margin-bottom:6px}
+input{width:100%;font:inherit;padding:11px 14px;border-radius:10px;border:2px solid var(--mute);background:var(--bg);color:var(--ink)}
+.hint{color:var(--mute);font-size:15px;margin:10px 0 0}
+footer{padding:32px 0 48px;color:var(--mute)}
+@media (max-width:680px){.hero{grid-template-columns:1fr;padding-top:32px}.rec{max-width:240px;order:-1}.qr{grid-template-columns:1fr;justify-items:center;text-align:left}.qr>div{width:100%}.gigs li{grid-template-columns:1fr;gap:2px}}
+@media print{body{background:#fff;color:#000}.rec,.hero .btn{display:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>DJ<span>Elul</span></h1>
+      <p class="tag">House, hip-hop and open-format sets for weddings, clubs and private parties.</p>
+      <a class="btn" href="#book">Book a date</a><a class="btn alt" href="#scan">Scan to connect</a>
+    </div>
+    <div class="rec" role="img" aria-label="Spinning vinyl record"></div>
+  </header>
+
+  <section id="shows">
+    <h2>Upcoming sets</h2>
+    <ul class="gigs">
+      <li><b>Fri, Oct 10</b><span>Venue Name<small>City, State · 9 PM to 2 AM</small></span></li>
+      <li><b>Sat, Oct 18</b><span>Private Event<small>City, State · 7 PM to 11 PM</small></span></li>
+      <li><b>Sat, Nov 1</b><span>Club Name<small>City, State · 10 PM to 3 AM</small></span></li>
+    </ul>
+  </section>
+
+  <section id="sound">
+    <h2>The sound</h2>
+    <ul class="genres"><li>House</li><li>Hip-hop</li><li>R&amp;B</li><li>Afrobeats</li><li>Top 40</li><li>Throwbacks</li></ul>
+  </section>
+
+  <section id="scan">
+    <h2>Scan to connect</h2>
+    <div class="qr">
+      <div id="qr" aria-label="QR code"></div>
+      <div>
+        <label for="url">Where should the code send people?</label>
+        <input id="url" type="url" inputmode="url" placeholder="https://">
+        <p class="hint">Paste your song-request form, tip link, Instagram, or this page's address. The code updates as you type.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <h2>Book a date</h2>
+    <p>Tell me the date, venue and crowd size.</p>
+    <p><a class="btn" href="mailto:booking@example.com">booking@example.com</a></p>
+  </section>
+
+  <footer>DJ Elul · @yourhandle</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(function(){
+  var box=document.getElementById('qr'),input=document.getElementById('url');
+  function draw(text){
+    if(!text){box.innerHTML='';return;}
+    try{
+      var q=qrcode(0,'M');q.addData(text);q.make();
+      var n=q.getModuleCount(),m=2,d='';
+      for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(q.isDark(r,c))d+='M'+(c+m)+' '+(r+m)+'h1v1h-1z';
+      var s=n+m*2;
+      box.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+s+' '+s+'" shape-rendering="crispEdges"><path fill="#141b4d" d="'+d+'"/></svg>';
+    }catch(e){box.textContent='Link too long for a QR code.';}
+  }
+  var start='';
+  try{start=/^https?:/.test(location.href)?location.href:'';}catch(e){}
+  input.value=start;draw(start);
+  input.addEventListener('input',function(){draw(input.value.trim());});
+})();
+</script>
+</body>
+</html>
